@@ -12,6 +12,8 @@
 
 本專案使用 **WWAudioStreamTranscription** 與 **WWMicrophoneInput** 實作即時語音轉文字功能。
 
+https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
+
 ## 📱 功能
 
 - **直覺的狀態提示**：介面初始會顯示「按下按鈕開始說話」。開始辨識後，會即時更新並顯示轉換後的文字。

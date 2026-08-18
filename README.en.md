@@ -12,6 +12,8 @@
 
 This project implements a real-time speech-to-text feature using **WWAudioStreamTranscription** and **WWMicrophoneInput**.
 
+https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
+
 ## 📱 Features
 
 - **Intuitive status prompts**: The UI initially displays “Press the button to start speaking.” Once recognition begins, it updates in real time with the transcribed text.
