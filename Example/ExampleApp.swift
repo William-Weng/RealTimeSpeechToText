@@ -1,6 +1,6 @@
 //
 //  ExampleApp.swift
-//  Example
+//  LiveSTT
 //
 //  Created by William.Weng on 2026/7/7.
 //

@@ -1,6 +1,6 @@
 //
 //  SpeechViewModel.swift
-//  Example
+//  LiveSTT
 //
 //  Created by William.Weng on 2026/8/18.
 //
@@ -12,7 +12,7 @@ import WWMicrophoneInput
 
 /// 語音辨識的 ViewModel
 @Observable
-final class SpeechViewModel: Observable {
+final class SpeechViewModel {
     
     var text = ""                                               // 目前辨識出的文字結果
     var isRecording = false                                     // 是否正在錄音中
@@ -20,11 +20,14 @@ final class SpeechViewModel: Observable {
     var language: SupportedLanguage                             // 語音辨識使用的語言
     
     @ObservationIgnored
+    private let threshold: SpeechThreshold = .init()            // 語音偵測閾值設定
+    
+    @ObservationIgnored
     private var microphoneInput: WWMicrophoneInput?             // 麥克風輸入管理器
     
     @ObservationIgnored
     private var transcription: WWAudioStreamTranscription?      // 音訊串流轉文字物件
-    
+        
     /// 初始化語言設定
     ///
     /// - Parameter language: 預設語言，預設為繁體中文（台灣）
@@ -102,6 +105,7 @@ private extension SpeechViewModel {
         
         let locale = Locale(identifier: language.identity)
         let transcription = try WWAudioStreamTranscription(locale: locale)
+        let threshold = self.threshold
         
         transcription.onResult = { [weak self] text, isFinal in
             
@@ -120,7 +124,8 @@ private extension SpeechViewModel {
         }
         
         let microphone = WWMicrophoneInput { [weak transcription] buffer in
-            transcription?.append(buffer: buffer)
+            if !threshold.detect(from: buffer) { return }
+            transcription?.append(buffer: buffer.value)
         }
         
         try microphone.configure()

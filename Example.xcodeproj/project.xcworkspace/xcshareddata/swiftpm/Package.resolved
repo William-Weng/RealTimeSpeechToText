@@ -1,5 +1,5 @@
 {
-  "originHash" : "d28c051f0e48f0aa541e614b8ea1611d13a137cb0c5ab80570d841fd9fb2c2b2",
+  "originHash" : "5edd5147000498d3bd62c9ba112508123e5a865ea6775e622420b3b17793fd48",
   "pins" : [
     {
       "identity" : "wwaudiostreamtranscription",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWMicrophoneInput",
       "state" : {
-        "revision" : "92fbbac953ae0f6f71d4b697086fd3ce8bf51736",
-        "version" : "0.5.2"
+        "revision" : "192b5bbea6f69f90d0d79cb83d0de43e848fe352",
+        "version" : "0.6.0"
       }
     }
   ],

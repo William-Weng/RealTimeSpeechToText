@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Example
+//  LiveSTT
 //
 //  Created by William.Weng on 2026/7/7.
 //
@@ -25,9 +25,7 @@ struct ContentView: View {
             
             VStack(spacing: 20) {
                 resultTextView
-                if let errorMessage = viewModel.errorMessage {
-                    errorMessageView(errorMessage)
-                }
+                if let errorMessage = viewModel.errorMessage { errorMessageView(errorMessage) }
                 startButton
             }.onChange(of: viewModel.language, { _, _ in
                 viewModel.stop()

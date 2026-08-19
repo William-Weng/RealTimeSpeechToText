@@ -1,12 +1,13 @@
 //
-//  SpeechError.swift
-//  Example
+//  Error.swift
+//  LiveSTT
 //
 //  Created by William.Weng on 2026/8/18.
 //
 
 import Foundation
 
+/// 辨識錯誤
 enum SpeechError: LocalizedError {
     
     case speechAuthorizationDenied
