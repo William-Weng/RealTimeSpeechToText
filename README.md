@@ -12,7 +12,7 @@
 
 本專案使用 **WWAudioStreamTranscription** 與 **WWMicrophoneInput** 實作即時語音轉文字功能。
 
-https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
+https://github.com/user-attachments/assets/11730d2e-c290-4a04-b428-2d46caf7f643
 
 ## 📱 [功能](https://peterpanswift.github.io/iphone-bezels/)
 

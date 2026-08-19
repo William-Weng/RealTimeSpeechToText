@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8177C5772F91CB0F00ACEA3E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8177C5772F91CB0F00ACEA3E /* LiveSTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveSTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -55,7 +55,7 @@
 		8177C5782F91CB0F00ACEA3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8177C5772F91CB0F00ACEA3E /* Example.app */,
+				8177C5772F91CB0F00ACEA3E /* LiveSTT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,9 +63,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8177C5762F91CB0F00ACEA3E /* Example */ = {
+		8177C5762F91CB0F00ACEA3E /* LiveSTT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8177C5822F91CB1100ACEA3E /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 8177C5822F91CB1100ACEA3E /* Build configuration list for PBXNativeTarget "LiveSTT" */;
 			buildPhases = (
 				8177C5732F91CB0F00ACEA3E /* Sources */,
 				8177C5742F91CB0F00ACEA3E /* Frameworks */,
@@ -78,7 +78,7 @@
 			fileSystemSynchronizedGroups = (
 				8177C5792F91CB0F00ACEA3E /* Example */,
 			);
-			name = Example;
+			name = LiveSTT;
 			packageProductDependencies = (
 				81C64A53303403DC00D2900E /* WWAudioStreamTranscription */,
 				81570A3130342D5900922E54 /* WWMicrophoneInput */,
@@ -88,7 +88,7 @@
 				81570A4C3034488300922E54 /* WWMicrophoneInput */,
 			);
 			productName = Example;
-			productReference = 8177C5772F91CB0F00ACEA3E /* Example.app */;
+			productReference = 8177C5772F91CB0F00ACEA3E /* LiveSTT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8177C5762F91CB0F00ACEA3E /* Example */,
+				8177C5762F91CB0F00ACEA3E /* LiveSTT */,
 			);
 		};
 /* End PBXProject section */
@@ -279,10 +279,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20260819;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveSTT;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要使用麥克風進行語音辨識";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要使用語音辨識將聲音轉換為文字";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,8 +296,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = idv.william.Example;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -314,10 +315,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20260819;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveSTT;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要使用麥克風進行語音辨識";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要使用語音辨識將聲音轉換為文字";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,8 +332,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = idv.william.Example;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -355,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8177C5822F91CB1100ACEA3E /* Build configuration list for PBXNativeTarget "Example" */ = {
+		8177C5822F91CB1100ACEA3E /* Build configuration list for PBXNativeTarget "LiveSTT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8177C5832F91CB1100ACEA3E /* Debug */,

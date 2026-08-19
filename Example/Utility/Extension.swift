@@ -16,7 +16,7 @@ extension String {
         
         guard count == 2 else { return self }
         
-        let base: UInt32 = 127397
+        let base: UInt32 = 0x1F1A5
         
         var result = ""
         for char in uppercased() {

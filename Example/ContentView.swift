@@ -14,6 +14,7 @@ import SwiftUI
 import Speech
 import AVFoundation
 
+/// Real-Time Speech-To-Text (STT)
 struct ContentView: View {
     
     @State private var viewModel = SpeechViewModel()
@@ -28,7 +29,9 @@ struct ContentView: View {
                     errorMessageView(errorMessage)
                 }
                 startButton
-            }
+            }.onChange(of: viewModel.language, { _, _ in
+                viewModel.stop()
+            })
             .padding()
             .navigationTitle(viewModel.language.title)
             .toolbar {
@@ -58,7 +61,7 @@ private extension ContentView {
             RoundedRectangle(cornerRadius: 16)
         )
     }
-        
+    
     /// 開始/停止辨識的按鈕
     /// 
     /// 根據當前是否正在錄音，切換按鈕文字與圖示
@@ -76,6 +79,26 @@ private extension ContentView {
         .buttonStyle(.borderedProminent)
         .tint(viewModel.isRecording ? .red: .blue)
     }
+}
+
+// MARK: - Private Subviews
+private extension ContentView {
+    
+    /// 錯誤訊息的顯示視圖
+    ///
+    /// 以紅色小字顯示，並佔滿水平寬度
+    /// - Parameter errorMessage: 要顯示的錯誤訊息文字。
+    func errorMessageView(_ errorMessage: String) -> some View {
+        
+        Text(errorMessage)
+            .font(.footnote)
+            .foregroundStyle(.red)
+            .frame(maxWidth: .infinity)
+    }
+}
+
+// MARK: - @ToolbarContentBuilder
+private extension ContentView {
     
     /// 語言選擇工具列項目
     ///
@@ -100,23 +123,6 @@ private extension ContentView {
                 }
             }
         }
-    }
-}
-
-
-// MARK: - @ToolbarContentBuilder
-private extension ContentView {
-    
-    /// 錯誤訊息的顯示視圖
-    ///
-    /// 以紅色小字顯示，並佔滿水平寬度
-    /// - Parameter errorMessage: 要顯示的錯誤訊息文字。
-    func errorMessageView(_ errorMessage: String) -> some View {
-        
-        Text(errorMessage)
-            .font(.footnote)
-            .foregroundStyle(.red)
-            .frame(maxWidth: .infinity)
     }
 }
 

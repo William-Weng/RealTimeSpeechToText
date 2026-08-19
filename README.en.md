@@ -12,7 +12,7 @@
 
 This project implements a real-time speech-to-text feature using **WWAudioStreamTranscription** and **WWMicrophoneInput**.
 
-https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
+https://github.com/user-attachments/assets/11730d2e-c290-4a04-b428-2d46caf7f643
 
 ## 📱 [Features](https://peterpanswift.github.io/iphone-bezels/)
 
