@@ -10,8 +10,12 @@
 		81570A3230342D5900922E54 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81570A3130342D5900922E54 /* WWMicrophoneInput */; };
 		81570A423034428700922E54 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81570A413034428700922E54 /* WWMicrophoneInput */; };
 		81570A453034429000922E54 /* WWAudioStreamTranscription in Frameworks */ = {isa = PBXBuildFile; productRef = 81570A443034429000922E54 /* WWAudioStreamTranscription */; };
-		81570A48303443B200922E54 /* WWAudioStreamTranscription in Frameworks */ = {isa = PBXBuildFile; productRef = 81570A47303443B200922E54 /* WWAudioStreamTranscription */; };
-		81570A4D3034488300922E54 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81570A4C3034488300922E54 /* WWMicrophoneInput */; };
+		81A2CA68303559990034D6C3 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA67303559990034D6C3 /* WWMicrophoneInput */; };
+		81A2CA6E30355FB50034D6C3 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA6D30355FB50034D6C3 /* WWMicrophoneInput */; };
+		81A2CA743035789A0034D6C3 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA733035789A0034D6C3 /* WWMicrophoneInput */; };
+		81A2CA7730357AB40034D6C3 /* WWMicrophoneInput in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA7630357AB40034D6C3 /* WWMicrophoneInput */; };
+		81A2CA7A30357B230034D6C3 /* WWAudioStreamTranscription in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA7930357B230034D6C3 /* WWAudioStreamTranscription */; };
+		81A2CA7D30357C0C0034D6C3 /* WWAudioStreamTranscription in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2CA7C30357C0C0034D6C3 /* WWAudioStreamTranscription */; };
 		81C64A54303403DC00D2900E /* WWAudioStreamTranscription in Frameworks */ = {isa = PBXBuildFile; productRef = 81C64A53303403DC00D2900E /* WWAudioStreamTranscription */; };
 /* End PBXBuildFile section */
 
@@ -34,10 +38,14 @@
 			files = (
 				81570A423034428700922E54 /* WWMicrophoneInput in Frameworks */,
 				81C64A54303403DC00D2900E /* WWAudioStreamTranscription in Frameworks */,
+				81A2CA7A30357B230034D6C3 /* WWAudioStreamTranscription in Frameworks */,
 				81570A453034429000922E54 /* WWAudioStreamTranscription in Frameworks */,
-				81570A4D3034488300922E54 /* WWMicrophoneInput in Frameworks */,
+				81A2CA7D30357C0C0034D6C3 /* WWAudioStreamTranscription in Frameworks */,
+				81A2CA743035789A0034D6C3 /* WWMicrophoneInput in Frameworks */,
+				81A2CA68303559990034D6C3 /* WWMicrophoneInput in Frameworks */,
+				81A2CA6E30355FB50034D6C3 /* WWMicrophoneInput in Frameworks */,
+				81A2CA7730357AB40034D6C3 /* WWMicrophoneInput in Frameworks */,
 				81570A3230342D5900922E54 /* WWMicrophoneInput in Frameworks */,
-				81570A48303443B200922E54 /* WWAudioStreamTranscription in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +92,12 @@
 				81570A3130342D5900922E54 /* WWMicrophoneInput */,
 				81570A413034428700922E54 /* WWMicrophoneInput */,
 				81570A443034429000922E54 /* WWAudioStreamTranscription */,
-				81570A47303443B200922E54 /* WWAudioStreamTranscription */,
-				81570A4C3034488300922E54 /* WWMicrophoneInput */,
+				81A2CA67303559990034D6C3 /* WWMicrophoneInput */,
+				81A2CA6D30355FB50034D6C3 /* WWMicrophoneInput */,
+				81A2CA733035789A0034D6C3 /* WWMicrophoneInput */,
+				81A2CA7630357AB40034D6C3 /* WWMicrophoneInput */,
+				81A2CA7930357B230034D6C3 /* WWAudioStreamTranscription */,
+				81A2CA7C30357C0C0034D6C3 /* WWAudioStreamTranscription */,
 			);
 			productName = Example;
 			productReference = 8177C5772F91CB0F00ACEA3E /* LiveSTT.app */;
@@ -116,8 +128,8 @@
 			mainGroup = 8177C56E2F91CB0F00ACEA3E;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				81570A46303443B200922E54 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */,
-				81570A4B3034488300922E54 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */,
+				81A2CA7530357AB40034D6C3 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */,
+				81A2CA7B30357C0C0034D6C3 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8177C5782F91CB0F00ACEA3E /* Products */;
@@ -296,7 +308,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.0;
+				MARKETING_VERSION = 0.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -332,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.0;
+				MARKETING_VERSION = 0.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -369,20 +381,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81570A46303443B200922E54 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWAudioStreamTranscription";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.5.0;
-			};
-		};
-		81570A4B3034488300922E54 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */ = {
+		81A2CA7530357AB40034D6C3 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWMicrophoneInput";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 0.5.0;
+				minimumVersion = 0.5.2;
+			};
+		};
+		81A2CA7B30357C0C0034D6C3 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWAudioStreamTranscription";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -400,15 +412,31 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWAudioStreamTranscription;
 		};
-		81570A47303443B200922E54 /* WWAudioStreamTranscription */ = {
+		81A2CA67303559990034D6C3 /* WWMicrophoneInput */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81570A46303443B200922E54 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */;
+			productName = WWMicrophoneInput;
+		};
+		81A2CA6D30355FB50034D6C3 /* WWMicrophoneInput */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WWMicrophoneInput;
+		};
+		81A2CA733035789A0034D6C3 /* WWMicrophoneInput */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WWMicrophoneInput;
+		};
+		81A2CA7630357AB40034D6C3 /* WWMicrophoneInput */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81A2CA7530357AB40034D6C3 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */;
+			productName = WWMicrophoneInput;
+		};
+		81A2CA7930357B230034D6C3 /* WWAudioStreamTranscription */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = WWAudioStreamTranscription;
 		};
-		81570A4C3034488300922E54 /* WWMicrophoneInput */ = {
+		81A2CA7C30357C0C0034D6C3 /* WWAudioStreamTranscription */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81570A4B3034488300922E54 /* XCRemoteSwiftPackageReference "WWMicrophoneInput" */;
-			productName = WWMicrophoneInput;
+			package = 81A2CA7B30357C0C0034D6C3 /* XCRemoteSwiftPackageReference "WWAudioStreamTranscription" */;
+			productName = WWAudioStreamTranscription;
 		};
 		81C64A53303403DC00D2900E /* WWAudioStreamTranscription */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -151,18 +151,13 @@ private extension SpeechViewModel {
     ///
     /// - Returns: SFSpeechRecognizer 的授權狀態
     func requestSpeechAuthorization() async -> SFSpeechRecognizerAuthorizationStatus {
-        
-        await withCheckedContinuation { continuation in
-            SFSpeechRecognizer.requestAuthorization { status in
-                continuation.resume(returning: status)
-            }
-        }
+        await WWAudioStreamTranscription.requestAuthorization()
     }
     
     /// 請求麥克風錄音權限
     /// 
     /// - Returns: 若使用者允許錄音則回傳 true，否則 false
     func requestMicrophoneAuthorization() async -> Bool {
-        await AVAudioApplication.requestRecordPermission()
+        await WWMicrophoneInput.requestAuthorization()
     }
 }
