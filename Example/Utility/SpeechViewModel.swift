@@ -14,17 +14,23 @@ import WWMicrophoneInput
 @Observable
 final class SpeechViewModel: Observable {
     
-    var text = ""               // 目前辨識出的文字結果
-    var isRecording = false     // 是否正在錄音中
-    var errorMessage: String?   // 錯誤訊息（若有）
-    
-    private let locale = Locale(identifier: "zh-TW")            // 語音辨識使用的語言區域設定（此處為繁體中文）
+    var text = ""                                               // 目前辨識出的文字結果
+    var isRecording = false                                     // 是否正在錄音中
+    var errorMessage: String?                                   // 錯誤訊息（若有）
+    var language: SupportedLanguage                             // 語音辨識使用的語言
     
     @ObservationIgnored
     private var microphoneInput: WWMicrophoneInput?             // 麥克風輸入管理器
     
     @ObservationIgnored
     private var transcription: WWAudioStreamTranscription?      // 音訊串流轉文字物件
+    
+    /// 初始化語言設定
+    ///
+    /// - Parameter language: 預設語言，預設為繁體中文（台灣）
+    init(language: SupportedLanguage = .TW) {
+        self.language = language
+    }
 }
 
 // MARK: - Public Actions
@@ -94,6 +100,7 @@ private extension SpeechViewModel {
     /// - Throws: 若初始化或啟動失敗則拋出錯誤
     func createAudioPipeline() throws {
         
+        let locale = Locale(identifier: language.identity)
         let transcription = try WWAudioStreamTranscription(locale: locale)
         
         transcription.onResult = { [weak self] text, isFinal in

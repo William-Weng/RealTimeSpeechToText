@@ -30,7 +30,10 @@ struct ContentView: View {
                 startButton
             }
             .padding()
-            .navigationTitle("語音辨識")
+            .navigationTitle(viewModel.language.title)
+            .toolbar {
+                languageItem
+            }
         }
     }
 }
@@ -44,7 +47,7 @@ private extension ContentView {
     var resultTextView: some View {
         
         ScrollView {
-            Text(viewModel.text.isEmpty ? "請按下按鈕開始說話" : viewModel.text)
+            Text(viewModel.text.isEmpty ? viewModel.language.message : viewModel.text)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
         }
@@ -55,6 +58,54 @@ private extension ContentView {
             RoundedRectangle(cornerRadius: 16)
         )
     }
+        
+    /// 開始/停止辨識的按鈕
+    /// 
+    /// 根據當前是否正在錄音，切換按鈕文字與圖示
+    var startButton: some View {
+        
+        Button {
+            viewModel.toggle()
+        } label: {
+            Label(
+                viewModel.isRecording ? viewModel.language.stopMessage : viewModel.language.startMessage,
+                systemImage: viewModel.isRecording ? "stop.circle.fill": "mic.circle.fill"
+            )
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(viewModel.isRecording ? .red: .blue)
+    }
+    
+    /// 語言選擇工具列項目
+    ///
+    /// 點選後，可以選擇支援的語系
+    @ToolbarContentBuilder
+    var languageItem: some ToolbarContent {
+        
+        ToolbarItem(placement: .topBarTrailing) {
+            Menu {
+                Picker("主要語系", selection: $viewModel.language) {
+                    ForEach(SupportedLanguage.allCases, id: \.self) { language in
+                        ZStack {
+                            Text("\(language.flag) \(language.name)")
+                        }
+                    }
+                }
+            } label: {
+                HStack(spacing: 4) {
+                    Text(viewModel.language.flag)
+                        .font(.headline)
+                        .padding()
+                }
+            }
+        }
+    }
+}
+
+
+// MARK: - @ToolbarContentBuilder
+private extension ContentView {
     
     /// 錯誤訊息的顯示視圖
     ///
@@ -66,24 +117,6 @@ private extension ContentView {
             .font(.footnote)
             .foregroundStyle(.red)
             .frame(maxWidth: .infinity)
-    }
-    
-    /// 開始/停止辨識的按鈕
-    /// 
-    /// 根據當前是否正在錄音，切換按鈕文字與圖示
-    var startButton: some View {
-        
-        Button {
-            viewModel.toggle()
-        } label: {
-            Label(
-                viewModel.isRecording ? "停止辨識" : "開始辨識",
-                systemImage: viewModel.isRecording ? "stop.circle.fill": "mic.circle.fill"
-            )
-            .frame(maxWidth: .infinity)
-        }
-        .buttonStyle(.borderedProminent)
-        .tint(viewModel.isRecording ? .red: .blue)
     }
 }
 
