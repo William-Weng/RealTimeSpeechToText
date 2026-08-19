@@ -14,7 +14,7 @@
 
 https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
 
-## 📱 功能
+## 📱 [功能](https://peterpanswift.github.io/iphone-bezels/)
 
 - **直覺的狀態提示**：介面初始會顯示「按下按鈕開始說話」。開始辨識後，會即時更新並顯示轉換後的文字。
 - **自動捲動文字區域**：文字顯示區包裝在 `ScrollView` 中，即使辨識內容很長，使用者也能順暢瀏覽。
@@ -44,14 +44,10 @@ https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
 <string>此 App 需要使用麥克風進行錄音。</string>
 ```
 
-## 📦 相依套件
+## 📦 [相依套件](https://swiftpackageindex.com/William-Weng)
 
 | 套件 | 說明 |
 |------|------|
 | [WWAudioStreamTranscription](https://github.com/William-Weng/WWAudioStreamTranscription) | 基於 Apple Speech framework 的即時音訊轉文字元件。 |
 | [WWMicrophoneInput](https://github.com/William-Weng/WWMicrophoneInput) | 使用 `AVAudioEngine` 建置的輕量級 iOS 麥克風輸入管理器，提供簡單的 API 來擷取麥克風的 PCM 音訊資料。 |
 
-## 🔗 連結
-
-- [畫面示範](https://peterpanswift.github.io/iphone-bezels/)
-- [套件索引](https://swiftpackageindex.com/William-Weng)

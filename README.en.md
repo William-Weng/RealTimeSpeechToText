@@ -14,7 +14,7 @@ This project implements a real-time speech-to-text feature using **WWAudioStream
 
 https://github.com/user-attachments/assets/5d045ec4-bb26-425f-a85a-89e119b6a569
 
-## 📱 Features
+## 📱 [Features](https://peterpanswift.github.io/iphone-bezels/)
 
 - **Intuitive status prompts**: The UI initially displays “Press the button to start speaking.” Once recognition begins, it updates in real time with the transcribed text.
 - **Automatically scrolling text area**: The text display is wrapped in a `ScrollView`, allowing users to browse smoothly even when the transcription becomes lengthy.
@@ -44,14 +44,10 @@ Because this project uses Apple’s Speech framework and the microphone for spee
 <string>This app needs access to the microphone for recording.</string>
 ```
 
-## 📦 Dependencies
+## 📦 [Dependencies](https://swiftpackageindex.com/William-Weng)
 
 | Package | Description |
 |------|------|
 | [WWAudioStreamTranscription](https://github.com/William-Weng/WWAudioStreamTranscription) | A real-time audio-stream-to-text component based on Apple’s Speech framework. |
 | [WWMicrophoneInput](https://github.com/William-Weng/WWMicrophoneInput) | A lightweight iOS microphone-input manager built with `AVAudioEngine`, providing a simple API for capturing PCM audio data from the microphone. |
 
-## 🔗 Links
-
-- [Screen Demo](https://peterpanswift.github.io/iphone-bezels/)
-- [Package Index](https://swiftpackageindex.com/William-Weng)
