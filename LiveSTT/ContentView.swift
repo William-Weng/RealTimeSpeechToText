@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var viewModel: SpeechViewModel                                   // 語音辨識的 ViewModel
     @State private var configuration: TranslationSession.Configuration              // 目前使用中的翻譯工作階段設定
     @State private var _configuration_ = TranslationSession.Configuration()         // 用來比較翻譯設定是否發生變化的設定值
+    @State private var debounceTask: Task<Void, Never>?                             // 防抖任務：當使用者停止輸入一段時間後才執行翻譯
     
     var body: some View {
 
@@ -53,14 +54,14 @@ struct ContentView: View {
                 viewModel.stop()
             }
             .onChange(of: viewModel.text, { _, _ in
-                resetConfiguration()
+                transcriptionDebounce(milliseconds: 500)
             })
             .translationTask(configuration) { session in
                 await translationTaskAction(session: session)
             }
         }
     }
-    
+        
     /// 建立 ContentView
     ///
     /// - Parameters:
@@ -243,6 +244,18 @@ private extension ContentView {
         }
         
         configuration = .build(for: viewModel.language, target: targetLanguage)
+    }
+    
+    /// 當文字改變時呼叫，帶有 500ms 防抖（debounce）效果
+    func transcriptionDebounce(milliseconds: any BinaryInteger) {
+        
+        debounceTask?.cancel()
+        
+        debounceTask = Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(milliseconds))
+            guard !Task.isCancelled else { return }
+            resetConfiguration()
+        }
     }
     
     /// 重設並更新翻譯的組態設定
