@@ -35,9 +35,9 @@ extension TranslationSession.Configuration {
     /// 快速建立翻譯階段的組態設定 (Configuration)
     ///
     /// - Parameters:
-    ///   - source: 來源語系（即原本文字的語言）。
-    ///   - target: 目標語系（即希望翻譯成的語言）。
-    /// - Returns: 回傳一個初始化完成的 `TranslationSession.Configuration` 實例。
+    ///   - source: 來源語系（即原本文字的語言）
+    ///   - target: 目標語系（即希望翻譯成的語言）
+    /// - Returns: 回傳一個初始化完成的 `TranslationSession.Configuration` 實例
     static func build(for source: SupportedLanguage, target: SupportedLanguage) -> Self {
         .init(source: .init(identifier: source.identity), target: .init(identifier: target.identity))
     }
