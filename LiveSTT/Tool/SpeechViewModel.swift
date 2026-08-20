@@ -145,24 +145,10 @@ private extension SpeechViewModel {
     /// - Throws: 若任一權限被拒絕，則拋出對應的 SpeechError
     func requestPermissions() async throws {
         
-        let speechStatus = await requestSpeechAuthorization()
+        let speechStatus = await WWAudioStreamTranscription.requestAuthorization()
         guard speechStatus == .authorized else { throw SpeechError.speechAuthorizationDenied }
         
-        let microphoneGranted = await requestMicrophoneAuthorization()
+        let microphoneGranted = await WWMicrophoneInput.requestAuthorization()
         guard microphoneGranted else { throw SpeechError.microphoneAuthorizationDenied}
-    }
-    
-    /// 請求語音辨識授權，並回傳授權狀態
-    ///
-    /// - Returns: SFSpeechRecognizer 的授權狀態
-    func requestSpeechAuthorization() async -> SFSpeechRecognizerAuthorizationStatus {
-        await WWAudioStreamTranscription.requestAuthorization()
-    }
-    
-    /// 請求麥克風錄音權限
-    /// 
-    /// - Returns: 若使用者允許錄音則回傳 true，否則 false
-    func requestMicrophoneAuthorization() async -> Bool {
-        await WWMicrophoneInput.requestAuthorization()
     }
 }

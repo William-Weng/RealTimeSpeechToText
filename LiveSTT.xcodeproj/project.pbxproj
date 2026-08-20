@@ -25,9 +25,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8177C5792F91CB0F00ACEA3E /* Example */ = {
+		8177C5792F91CB0F00ACEA3E /* LiveSTT */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Example;
+			path = LiveSTT;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -57,7 +57,7 @@
 		8177C56E2F91CB0F00ACEA3E = {
 			isa = PBXGroup;
 			children = (
-				8177C5792F91CB0F00ACEA3E /* Example */,
+				8177C5792F91CB0F00ACEA3E /* LiveSTT */,
 				8177C5782F91CB0F00ACEA3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8177C5792F91CB0F00ACEA3E /* Example */,
+				8177C5792F91CB0F00ACEA3E /* LiveSTT */,
 			);
 			name = LiveSTT;
 			packageProductDependencies = (
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8177C5722F91CB0F00ACEA3E /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = 8177C5722F91CB0F00ACEA3E /* Build configuration list for PBXProject "LiveSTT" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -312,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.6.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.live-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -348,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.6.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.realtime-stt";
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.william.live-stt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -363,7 +363,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8177C5722F91CB0F00ACEA3E /* Build configuration list for PBXProject "Example" */ = {
+		8177C5722F91CB0F00ACEA3E /* Build configuration list for PBXProject "LiveSTT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8177C5802F91CB1100ACEA3E /* Debug */,
