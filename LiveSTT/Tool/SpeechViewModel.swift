@@ -27,7 +27,7 @@ final class SpeechViewModel {
     
     @ObservationIgnored
     private var transcription: WWAudioStreamTranscription?      // 音訊串流轉文字物件
-        
+    
     /// 初始化語言設定
     ///
     /// - Parameter language: 預設語言，預設為繁體中文（台灣）
