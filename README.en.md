@@ -1,10 +1,10 @@
 [English](./README.en.md) | [正體中文](./README.md)
 
-# [RealTimeSpeechToText](https://swiftpackageindex.com/William-Weng)
+# [RealTimeSpeechToTextUI](https://swiftpackageindex.com/William-Weng)
 
 [![Swift-5.10](https://img.shields.io/badge/Swift-5.10-orange.svg)](https://developer.apple.com/swift/)
 [![iOS-17.0](https://img.shields.io/badge/iOS-17.0-pink.svg?style=flat)](https://developer.apple.com/swift/)
-![TAG](https://img.shields.io/github/v/tag/William-Weng/RealTimeSpeechToText)
+![TAG](https://img.shields.io/github/v/tag/William-Weng/RealTimeSpeechToTextUI)
 ![SPM](https://img.shields.io/badge/SPM-supported-brightgreen.svg)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg?style=flat)](https://developer.apple.com/swift/)
 
